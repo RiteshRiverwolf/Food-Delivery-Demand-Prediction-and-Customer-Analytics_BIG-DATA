@@ -1,0 +1,13 @@
+# data is large and downloaded via script, never committed
+data/
+outputs/**/*.csv
+outputs/**/*.parquet
+spark-warehouse/
+metastore_db/
+derby.log
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+kaggle.json
+*.json.key

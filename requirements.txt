@@ -1,0 +1,10 @@
+pyspark==3.5.3
+mrjob
+kaggle
+pandas
+pyarrow
+matplotlib
+seaborn
+plotly
+streamlit
+jupyter
