@@ -1,0 +1,106 @@
+department,rank,product_name,times_ordered,reorder_rate
+alcohol,1,Sauvignon Blanc,8246,0.6812
+alcohol,2,Chardonnay,6153,0.6875
+alcohol,3,Cabernet Sauvignon,6115,0.6029
+alcohol,4,Beer,5844,0.6699
+alcohol,5,Vodka,5475,0.724
+babies,1,Baby Food Stage 2 Blueberry Pear & Purple Carrot,8793,0.6465
+babies,2,Spinach Peas & Pear Stage 2 Baby Food,8035,0.6447
+babies,3,Gluten Free SpongeBob Spinach Littles,7083,0.6501
+babies,4,Broccoli & Apple Stage 2 Baby Food,6837,0.6367
+babies,5,Free & Clear Unscented Baby Wipes,6315,0.613
+bakery,1,100% Whole Wheat Bread,60816,0.7372
+bakery,2,Organic Bread with 21 Whole Grains,23006,0.7158
+bakery,3,Ezekiel 4:9 Bread Organic Sprouted Whole Grain,17789,0.629
+bakery,4,Sourdough Bread,16318,0.6903
+bakery,5,Original Nooks & Crannies English Muffins,14973,0.6406
+beverages,1,Sparkling Water Grapefruit,75886,0.7711
+beverages,2,Spring Water,56087,0.8123
+beverages,3,Lime Sparkling Water,46546,0.742
+beverages,4,Sparkling Natural Mineral Water,42934,0.7337
+beverages,5,100% Raw Coconut Water,37973,0.7884
+breakfast,1,Honey Nut Cheerios,26741,0.5737
+breakfast,2,Organic Old Fashioned Rolled Oats,20140,0.5403
+breakfast,3,Raisin Bran Cereal,15415,0.6091
+breakfast,4,Cereal,12184,0.5822
+breakfast,5,Organic Quick Oats,9893,0.5806
+bulk,1,Dried Mango,10150,0.7471
+bulk,2,Organic Rolled Oats,6380,0.6398
+bulk,3,Organic Black Mission Figs,2793,0.4579
+bulk,4,Apricots,2610,0.408
+bulk,5,Rolled Oats,1364,0.5528
+canned goods,1,Organic Black Beans,38001,0.5882
+canned goods,2,Organic Garbanzo Beans,30055,0.557
+canned goods,3,No Salt Added Black Beans,27924,0.5803
+canned goods,4,Organic Diced Tomatoes,21997,0.4759
+canned goods,5,Organic Low Sodium Chicken Broth,17716,0.4785
+dairy eggs,1,Organic Whole Milk,137905,0.8304
+dairy eggs,2,Organic Half & Half,76360,0.7815
+dairy eggs,3,Half & Half,69217,0.7618
+dairy eggs,4,Organic Whole String Cheese,59676,0.7648
+dairy eggs,5,Organic Unsweetened Almond Milk,57895,0.7578
+deli,1,Original Hummus,71314,0.7248
+deli,2,Uncured Genoa Salami,41473,0.66
+deli,3,Organic Extra Firm Tofu,29124,0.6636
+deli,4,Organic Roasted Turkey Breast,28384,0.6656
+deli,5,Oven Roasted Turkey Breast,20069,0.6374
+dry goods pasta,1,Marinara Sauce,19998,0.6261
+dry goods pasta,2,Organic Tomato Basil Pasta Sauce,16824,0.5285
+dry goods pasta,3,Spaghetti,15813,0.513
+dry goods pasta,4,Basil Pesto,15638,0.4398
+dry goods pasta,5,Tomato Paste,11279,0.3296
+frozen,1,Blueberries,55946,0.5826
+frozen,2,Organic Broccoli Florets,32887,0.6516
+frozen,3,Organic Whole Strawberries,31445,0.6274
+frozen,4,Frozen Organic Wild Blueberries,29905,0.6212
+frozen,5,Pineapple Chunks,24950,0.5731
+household,1,100% Recycled Paper Towels,27864,0.5912
+household,2,Sustainably Soft Bath Tissue,18231,0.5992
+household,3,Aluminum Foil,10774,0.2173
+household,4,Natural Free & Clear Dish Liquid,9175,0.4771
+household,5,100% Recycled Bathroom Tissue,7264,0.591
+international,1,Organic Sea Salt Roasted Seaweed Snacks,10345,0.6361
+international,2,Taco Seasoning,8992,0.5386
+international,3,New Mexico Taco Skillet Sauce For Chicken,4680,0.4844
+international,4,Sriracha Chili Sauce,4189,0.2616
+international,5,Original Roasted Seaweed Snacks,4058,0.6888
+meat seafood,1,Boneless Skinless Chicken Breasts,50281,0.662
+meat seafood,2,Ground Turkey Breast,26721,0.6429
+meat seafood,3,Boneless Skinless Chicken Breast,22590,0.6639
+meat seafood,4,Uncured Hickory Smoked Sunday Bacon,20775,0.617
+meat seafood,5,Organic Beef Hot Dogs,17140,0.6043
+other,1,Roasted Almond Butter,3976,0.6813
+other,2,Light CocoWhip! Coconut Whipped Topping,1536,0.5072
+other,3,93/7 Ground Beef,1307,0.632
+other,4,Coconut Almond Granola,819,0.5348
+other,5,Coffee Mate French Vanilla Creamer Packets,794,0.7204
+pantry,1,Extra Virgin Olive Oil,50255,0.4766
+pantry,2,Creamy Almond Butter,21490,0.5667
+pantry,3,Creamy Peanut Butter,20033,0.5243
+pantry,4,Organic Creamy Peanut Butter,18040,0.5679
+pantry,5,Organic Ketchup,15304,0.3888
+personal care,1,Lavender Hand Soap,5941,0.3338
+personal care,2,Lemon Verbena Hand Soap,4951,0.304
+personal care,3,Premium Epsom Salt,4228,0.5537
+personal care,4,Cotton Swabs,4197,0.1625
+personal care,5,Fluoride-Free Antiplaque & Whitening Peppermint Toothpaste,3443,0.3474
+pets,1,Grain Free Chicken Formula Cat Food,1825,0.7112
+pets,2,Grain Free Turkey & Salmon Formula Cat Food,1560,0.6846
+pets,3,Instant Action Cat Litter,1492,0.6273
+pets,4,Double Duty Advanced Odor Control Clumping Cat Litter,1288,0.6242
+pets,5,24/7 Performance Cat Litter,1095,0.5689
+produce,1,Banana,472565,0.8435
+produce,2,Bag of Organic Bananas,379450,0.8326
+produce,3,Organic Strawberries,264683,0.7777
+produce,4,Organic Baby Spinach,241921,0.7725
+produce,5,Organic Hass Avocado,213584,0.7966
+snacks,1,Lightly Salted Baked Snap Pea Crisps,24950,0.6278
+snacks,2,Original Veggie Straws,16850,0.6626
+snacks,3,Sea Salt Pita Chips,16626,0.5844
+snacks,4,Pretzel Crisps Original Deli Style Pretzel Crackers,15831,0.6047
+snacks,5,Sea Salt & Vinegar Potato Chips,14800,0.6243
+unknown,1,Organic Riced Cauliflower,8366,0.481
+unknown,2,Peanut Butter Ice Cream Cup,1933,0.478
+unknown,3,Organic Mango Yogurt,1675,0.5684
+unknown,4,Organic Celery Bunch,1645,0.2869
+unknown,5,Natural Lemon Flavored Sparkling Water,1455,0.567

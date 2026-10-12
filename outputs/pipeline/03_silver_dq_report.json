@@ -1,0 +1,32 @@
+{
+  "orders": {
+    "bronze_rows": 3421083,
+    "duplicates_removed": 0,
+    "quarantined": 0,
+    "quarantine_reasons": {},
+    "flags": {
+      "is_first_order (gap legitimately missing)": 206209,
+      "is_gap_capped (gap recorded as 30 = '30 or more')": 369323
+    },
+    "silver_rows": 3421083
+  },
+  "products": {
+    "bronze_rows": 49688,
+    "duplicates_removed": 0,
+    "quarantined": 0,
+    "quarantine_reasons": {},
+    "flags": {
+      "name_was_cleaned (extra whitespace removed)": 408,
+      "is_duplicate_name (same name, different product_id)": 274,
+      "is_unknown_category ('missing' -> 'unknown')": 1258
+    },
+    "silver_rows": 49688
+  },
+  "order_items": {
+    "bronze_rows": 33819106,
+    "duplicates_removed": 0,
+    "quarantined": 0,
+    "quarantine_reasons": {},
+    "silver_rows": 33819106
+  }
+}

@@ -1,0 +1,6 @@
+segment,customers,avg_orders,avg_days_between,avg_basket,avg_reorder_ratio,total_items,pct_customers,pct_items
+Power Shoppers,26080,31.1,6.8,14.1,0.575,11207366,12.6,34.6
+Frequent Top-up,25473,30.5,6.5,5.8,0.536,4646674,12.4,14.3
+Regulars,103104,12.9,14.6,10.1,0.432,13631896,50.0,42.0
+Occasional Bulk,12523,6.0,24.7,18.4,0.339,1392845,6.1,4.3
+Light / At-risk,39029,5.8,25.0,6.8,0.3,1555708,18.9,4.8

@@ -1,0 +1,9 @@
+{
+  "A_demand_by_time": 1.3,
+  "B_department_kpis": 11.2,
+  "C_top_products_by_dept": 1.5,
+  "D_department_time_mix": 3.1,
+  "E_customer_profile": 10.9,
+  "F_customer_order_rhythm": 1.5,
+  "G_first_in_cart": 0.7
+}

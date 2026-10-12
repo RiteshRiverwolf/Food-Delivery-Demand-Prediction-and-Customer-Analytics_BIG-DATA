@@ -31,6 +31,30 @@ kaggle datasets download -d yasserh/instacart-online-grocery-basket-analysis-dat
 
 **Source:** Instacart, "The Instacart Online Grocery Shopping Dataset 2017". Accessed via Kaggle (`yasserh/instacart-online-grocery-basket-analysis-dataset`) on 12 Oct 2026.
 
+## Medallion pipeline (mid-term)
+
+```
+Kaggle CSV ──► Landing (data/raw) ──► Bronze ──► Silver ──► Gold ──► charts
+               checksums + manifest   raw +      cleaned,   analytics
+                                      lineage    validated  tables
+```
+
+| Stage | Script | What it does |
+|---|---|---|
+| Ingest | [01_ingest.py](src/pipeline/01_ingest.py) | Downloads from Kaggle if missing; validates headers, MD5, sizes, row counts; writes an ingestion manifest with a batch id |
+| Bronze | [02_bronze.py](src/pipeline/02_bronze.py) | Raw columns as strings in Parquet + `_source_system`, `_source_file`, `_batch_id`, `_ingested_at`, `_row_hash`; partitioned by batch; row counts reconciled with the manifest |
+| Silver | [03_silver.py](src/pipeline/03_silver.py) | Dedup on business keys (latest ingest wins), type casting, text standardisation, 20 validation rules with a quarantine table, data-quality flags, derived columns |
+| Processing | [04_processing.py](src/pipeline/04_processing.py) | Spark SQL, joins (broadcast), aggregations, pivot, window functions (rank, row_number, ntile, lag, rolling) → Gold tables |
+| Charts | [05_charts.py](src/pipeline/05_charts.py) | Report figures from the Gold summaries |
+
+Run everything:
+
+```bash
+bash src/pipeline/run_pipeline.sh
+```
+
+Reports land in `outputs/pipeline/` (manifest, bronze audit, silver data-quality report, Gold summaries, figures).
+
 ## Technology stack
 
 Hadoop/HDFS, MapReduce (MRJob), Pig, Hive, Apache Spark (PySpark, Spark SQL, MLlib, Structured Streaming), Google Cloud Storage and Dataproc.

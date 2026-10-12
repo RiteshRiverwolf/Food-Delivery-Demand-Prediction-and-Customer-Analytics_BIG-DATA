@@ -1,0 +1,87 @@
+{
+  "batch_id": "20261012_141635",
+  "ingested_at_utc": "2026-10-12T14:16:35.529755+00:00",
+  "landing_path": "../../data/raw",
+  "source": {
+    "provider": "Instacart (Maplebear Inc.)",
+    "dataset": "The Instacart Online Grocery Shopping Dataset 2017",
+    "distribution": "Kaggle",
+    "kaggle_ref": "yasserh/instacart-online-grocery-basket-analysis-dataset",
+    "url": "https://www.kaggle.com/datasets/yasserh/instacart-online-grocery-basket-analysis-dataset",
+    "format": "CSV"
+  },
+  "files": {
+    "orders": {
+      "file": "orders.csv",
+      "rows": 3421083,
+      "bytes": 108968645,
+      "md5": "dd0b2f4ee716409b8e79e7b1c611a0b8",
+      "columns": [
+        "order_id",
+        "user_id",
+        "eval_set",
+        "order_number",
+        "order_dow",
+        "order_hour_of_day",
+        "days_since_prior_order"
+      ]
+    },
+    "order_products_prior": {
+      "file": "order_products__prior.csv",
+      "rows": 32434489,
+      "bytes": 577550706,
+      "md5": "8bca7ad1968ee8e07760b94db74461fb",
+      "columns": [
+        "order_id",
+        "product_id",
+        "add_to_cart_order",
+        "reordered"
+      ]
+    },
+    "order_products_train": {
+      "file": "order_products__train.csv",
+      "rows": 1384617,
+      "bytes": 24680147,
+      "md5": "5d8f7580855097e3644ea626ee430b75",
+      "columns": [
+        "order_id",
+        "product_id",
+        "add_to_cart_order",
+        "reordered"
+      ]
+    },
+    "products": {
+      "file": "products.csv",
+      "rows": 49688,
+      "bytes": 2166953,
+      "md5": "dfcfded9d4af77d8b747913a4cbe6ffc",
+      "columns": [
+        "product_id",
+        "product_name",
+        "aisle_id",
+        "department_id"
+      ]
+    },
+    "aisles": {
+      "file": "aisles.csv",
+      "rows": 134,
+      "bytes": 2603,
+      "md5": "bc49e521faa60e1542d4a94cac3e3bb0",
+      "columns": [
+        "aisle_id",
+        "aisle"
+      ]
+    },
+    "departments": {
+      "file": "departments.csv",
+      "rows": 21,
+      "bytes": 270,
+      "md5": "18d5219db49bd50b403d39016c3ecdc5",
+      "columns": [
+        "department_id",
+        "department"
+      ]
+    }
+  },
+  "total_rows": 37290032
+}

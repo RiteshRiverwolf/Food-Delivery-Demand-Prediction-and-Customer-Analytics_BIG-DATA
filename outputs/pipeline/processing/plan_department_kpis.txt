@@ -1,0 +1,22 @@
+== Physical Plan ==
+AdaptiveSparkPlan isFinalPlan=false
++- Sort [items_ordered#162L DESC NULLS LAST], true, 0
+   +- Project [department#33, items_ordered#162L, orders#163L, customers#164L, reorder_rate#166, round((cast((items_ordered#162L * 100) as double) / cast(_we0#176L as double)), 2) AS pct_of_items#175]
+      +- Window [sum(items_ordered#162L) windowspecdefinition(specifiedwindowframe(RowFrame, unboundedpreceding$(), unboundedfollowing$())) AS _we0#176L]
+         +- Exchange SinglePartition, ENSURE_REQUIREMENTS, [plan_id=366]
+            +- HashAggregate(keys=[department#33], functions=[first(count(1)#187L, true), count(order_id#184), count(user_id#185), first(avg(CAST(reordered AS INT))#189, true)])
+               +- Exchange hashpartitioning(department#33, 32), ENSURE_REQUIREMENTS, [plan_id=363]
+                  +- HashAggregate(keys=[department#33], functions=[partial_first(count(1)#187L, true) FILTER (WHERE (gid#183 = 0)), partial_count(order_id#184) FILTER (WHERE (gid#183 = 1)), partial_count(user_id#185) FILTER (WHERE (gid#183 = 2)), partial_first(avg(CAST(reordered AS INT))#189, true) FILTER (WHERE (gid#183 = 0))])
+                     +- HashAggregate(keys=[department#33, order_id#184, user_id#185, gid#183], functions=[count(1), avg(CAST(reordered AS INT)#186)])
+                        +- Exchange hashpartitioning(department#33, order_id#184, user_id#185, gid#183, 32), ENSURE_REQUIREMENTS, [plan_id=359]
+                           +- HashAggregate(keys=[department#33, order_id#184, user_id#185, gid#183], functions=[partial_count(1), partial_avg(CAST(reordered AS INT)#186)])
+                              +- Expand [[department#33, null, null, 0, cast(reordered#55 as int)], [department#33, order_id#50, null, 1, null], [department#33, null, user_id#52, 2, null]], [department#33, order_id#184, user_id#185, gid#183, CAST(reordered AS INT)#186]
+                                 +- Project [order_id#50, user_id#52, reordered#55, department#33]
+                                    +- BroadcastHashJoin [product_id#51], [product_id#28], Inner, BuildRight, false
+                                       :- Project [order_id#50, product_id#51, user_id#52, reordered#55]
+                                       :  +- Filter isnotnull(product_id#51)
+                                       :     +- FileScan parquet [order_id#50,product_id#51,user_id#52,reordered#55,eval_set#58] Batched: true, DataFilters: [isnotnull(product_id#51)], Format: Parquet, Location: InMemoryFileIndex(1 paths)[file:/Users/riverwolf/Documents/big data major project/data/silver/ord..., PartitionFilters: [isnotnull(eval_set#58), (eval_set#58 = prior)], PushedFilters: [IsNotNull(product_id)], ReadSchema: struct<order_id:int,product_id:int,user_id:int,reordered:boolean>
+                                       +- BroadcastExchange HashedRelationBroadcastMode(List(cast(input[0, int, false] as bigint)),false), [plan_id=353]
+                                          +- Filter isnotnull(product_id#28)
+                                             +- FileScan parquet [product_id#28,department#33] Batched: true, DataFilters: [isnotnull(product_id#28)], Format: Parquet, Location: InMemoryFileIndex(1 paths)[file:/Users/riverwolf/Documents/big data major project/data/silver/pro..., PartitionFilters: [], PushedFilters: [IsNotNull(product_id)], ReadSchema: struct<product_id:int,department:string>
+
