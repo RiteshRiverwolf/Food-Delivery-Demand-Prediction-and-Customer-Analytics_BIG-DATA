@@ -1,6 +1,5 @@
 # data is large and downloaded via script, never committed
 data/
-outputs/**/*.csv
 outputs/**/*.parquet
 spark-warehouse/
 metastore_db/

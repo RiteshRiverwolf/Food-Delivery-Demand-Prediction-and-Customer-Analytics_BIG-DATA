@@ -1,0 +1,3 @@
+orders_by_time: 6s
+top_products: 18s
+department_demand: 18s
