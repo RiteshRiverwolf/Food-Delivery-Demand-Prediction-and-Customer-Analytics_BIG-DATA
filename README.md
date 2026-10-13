@@ -55,6 +55,14 @@ bash src/pipeline/run_pipeline.sh
 
 Reports land in `outputs/pipeline/` (manifest, bronze audit, silver data-quality report, Gold summaries, figures).
 
+### Demo
+
+[notebooks/mid_term_demo.ipynb](notebooks/mid_term_demo.ipynb) walks through every step on the real data and ends with a live test: [demo_bad_batch.py](src/pipeline/demo_bad_batch.py) injects 16 broken records into Bronze as a separate batch, Silver deduplicates and quarantines them with reasons, and the batch is then removed.
+
+```bash
+.venv/bin/jupyter lab notebooks/mid_term_demo.ipynb
+```
+
 ## Technology stack
 
 Hadoop/HDFS, MapReduce (MRJob), Pig, Hive, Apache Spark (PySpark, Spark SQL, MLlib, Structured Streaming), Google Cloud Storage and Dataproc.

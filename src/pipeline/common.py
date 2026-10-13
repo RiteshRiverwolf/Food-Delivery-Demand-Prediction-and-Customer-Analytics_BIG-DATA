@@ -6,6 +6,7 @@ Dataproc it becomes a gs:// bucket path, so the same code runs in both places.
 import argparse
 import json
 import os
+import sys
 
 from pyspark.sql import SparkSession
 
@@ -38,6 +39,8 @@ def parse_args(description):
 
 
 def spark_session(app_name):
+    # Python workers must use the same interpreter as the driver (not the system python3)
+    os.environ.setdefault("PYSPARK_PYTHON", sys.executable)
     spark = (
         SparkSession.builder.appName(app_name)
         .config("spark.driver.memory", "6g")

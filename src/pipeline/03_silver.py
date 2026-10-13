@@ -89,7 +89,7 @@ def build_orders(spark, base):
         .otherwise("night").alias("time_of_day"),
         F.col("days_t").alias("days_since_prior_order"),
         (F.col("order_number_t") == 1).alias("is_first_order"),
-        (F.col("days_t") == 30).alias("is_gap_capped"),
+        (F.coalesce(F.col("days_t"), F.lit(-1)) == 30).alias("is_gap_capped"),
         "_batch_id", "_ingested_at",
     )
     stats = {

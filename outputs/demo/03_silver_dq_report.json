@@ -1,0 +1,48 @@
+{
+  "orders": {
+    "bronze_rows": 3421091,
+    "duplicates_removed": 1,
+    "quarantined": 6,
+    "quarantine_reasons": {
+      "invalid_eval_set": 1,
+      "missing_key": 1,
+      "hour_out_of_range": 1,
+      "missing_gap_not_first_order": 1,
+      "gap_on_first_order": 1,
+      "bad_type": 1
+    },
+    "flags": {
+      "is_first_order (gap legitimately missing)": 206210,
+      "is_gap_capped (gap recorded as 30 = '30 or more')": 369323
+    },
+    "silver_rows": 3421084
+  },
+  "products": {
+    "bronze_rows": 49690,
+    "duplicates_removed": 0,
+    "quarantined": 2,
+    "quarantine_reasons": {
+      "empty_name": 1,
+      "unknown_department_id": 1
+    },
+    "flags": {
+      "name_was_cleaned (extra whitespace removed)": 408,
+      "is_duplicate_name (same name, different product_id)": 274,
+      "is_unknown_category ('missing' -> 'unknown')": 1258
+    },
+    "silver_rows": 49688
+  },
+  "order_items": {
+    "bronze_rows": 33819112,
+    "duplicates_removed": 0,
+    "quarantined": 5,
+    "quarantine_reasons": {
+      "reorder_on_first_order": 1,
+      "orphan_order": 1,
+      "invalid_cart_position": 1,
+      "bad_type": 1,
+      "orphan_product": 1
+    },
+    "silver_rows": 33819107
+  }
+}
